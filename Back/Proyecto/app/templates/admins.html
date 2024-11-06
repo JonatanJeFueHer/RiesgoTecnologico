@@ -1,0 +1,8 @@
+<style type="text/css">
+	li {background-color: rgb(255, 146, 146);}
+</style>
+<ul>
+	{% for admin in admins %}
+		<li>{{ admin.nombre }} - {{ admin.telefono }}</li>
+	{% endfor %}
+</ul>

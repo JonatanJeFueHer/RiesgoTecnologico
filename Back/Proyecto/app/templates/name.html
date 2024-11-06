@@ -1,0 +1,39 @@
+{% load widget_tweaks %}
+<form method="POST" action="{% url 'upload2' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+      {% render_field form.tipo class="form-select" placeholder="Tipo" %}
+    </div>
+      
+    <div class="form-group">
+      {% render_field form.zona class="form-select" placeholder="Zona" %}
+    </div>
+      
+    <div class="form-group">
+      {% render_field form.forma_pago class="form-select" id="exampleInputUsername" placeholder="Forma de Pago" %}
+    </div>
+      
+    <div class="form-group">
+      {% render_field form.descripcion type="text" class="form-control" id="exampleInputPassword" placeholder="Descripcion" %}
+    </div>
+      
+    <div class="form-group">
+      {% render_field form.imagen type="file" id="exampleInputPassword1" placeholder="Foto" %}
+    </div>
+
+    <div class="form-group">
+      {% render_field form.video type="text" class="form-control" id="exampleInputPassword1" placeholder="Video" %}
+    </div>
+
+    <div class="form-group">
+      {% render_field form.contacto type="text" class="form-control" id="exampleInputPassword1" placeholder="Contacto" %}
+    </div>
+
+    <div class="form-group">
+      {% render_field form.vigencia type="date" class="form-control datepicker" id="exampleInputPassword1" placeholder="Vigencia" %}
+    </div>
+      
+    <div>
+      <button type="submit" value="Submit" > Register </button>
+    </div>
+</form>

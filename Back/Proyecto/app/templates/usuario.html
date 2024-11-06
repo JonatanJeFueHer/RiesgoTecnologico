@@ -1,0 +1,8 @@
+<style type="text/css">
+	li {background-color: rgb(146, 255, 184);}
+</style>
+<ul>
+	{% for usuario in usuarios %}
+		<li>{{ usuario.nombre}} {{ usuario.apellidop}} - {{ usuario.correo }}</li>
+	{% endfor %}
+</ul>
